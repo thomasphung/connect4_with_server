@@ -1,0 +1,52 @@
+<!doctype html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connect 4</title>
+  
+  <link href="css/connect4.css" rel="stylesheet">
+</head>
+<body>
+<div class="top-bar">
+  <h1>Play Connect-4</h1>
+</div>
+<div class="game-setup">
+  <div id="lists">
+  <div id="list-div-1"><h2>Player 1</h2>
+    <div class="image-container-1"></div>
+    <select class="piece-list-1">
+      <option value='url("css/Images/YellowPiece.png")' selected="selected">Yellow Smiley</option>
+      <option value='url("css/Images/RedPiece.png")'>Red Smiley</option>
+    </select>
+  </div>
+  <div id="list-div-2"><h2>Player 2</h2>
+    <div class="image-container-2"></div>
+    <select class="piece-list-2">
+      <option value='url("css/Images/purpleDie.png') selected="selected">Purple Die</option>
+      <option value='url("css/Images/greenDie.png')>Green Die</option>
+    </select>
+  </div>
+</div>
+<div class="start-options">
+  <button type="button" id="start-game">New Game</button>
+<div class="dropdown"> 
+  <span><u>How To Play/Start New Game</u> (Hover/Click Here)</span>
+  <div class="dropdown-content">
+      <ul id="dd-text">
+        <li>Choose Your Pieces For Player 1 and Player 2, Then Press New Game</li>
+        <li>Click One Of The Dotted Circles To Place Piece In That Column</li>
+        <li>To Start A New Game - Click Arrow At The Bottom Of The Board or Click "New Game" Button</li>
+        <li>Easter-Egg: Arrow Creates Board Animations</li>
+      </ul>
+  </div>
+</div>
+</div>
+</div>
+<div id="game">
+  <table id="board"></table>
+  <div class="side-div"><img src="css/Images/arrow.png" id="restart-arrow">
+  </div>
+</div>
+<script src="scripts/connect4Object.js"></script>
+
+</body>
+</html>

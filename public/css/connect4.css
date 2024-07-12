@@ -1,0 +1,296 @@
+body {
+  height: 100%;
+  margin:0;
+  padding:0;
+  width:100%;
+}
+li {
+  margin-top:5px;
+}
+#lists {
+  display:flex;
+  justify-content: space-between;
+}
+#lists > div {
+  margin:10px;
+}
+.start-options {
+  display:flex;
+  justify-content: space-between;
+}
+.image-container-1 {
+  background-image: url("css/Images/YellowPiece.png");
+  background-size: cover;
+  height:50px;
+  width:50px;
+}
+.image-container-2 {
+  background-image: url("css/Images/purpleDie.png");
+  background-size: cover;
+  height:50px;
+  width:50px;
+}
+#start-game {
+  width:100px;
+  height:50px;
+  margin-top:50px;
+  margin-right:20px;
+  position:absolute;
+  right:1000px;
+}
+.game-setup {
+  width:100%;
+  display:flex;
+  justify-content: space-around;
+  justify-items: baseline;
+  flex-direction: row;
+  margin-bottom:50px;
+}
+.piece-list-1 {
+  margin-right:auto;
+}
+.piece-list-2 {
+  margin-right:auto;
+}
+.top-bar {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width:100%;
+  margin-bottom:50px;
+}
+#options {
+  padding-top:50px;
+  display:flex;
+  justify-content: center;
+}
+#game {
+  display:flex;
+  justify-content: center;
+}
+.side-div {
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+#restart-arrow{
+  margin-top:auto;
+  height:50px;
+}
+#restart-arrow:hover {
+  filter:brightness(200%);
+}
+
+#board {
+  border:20px solid blue;
+  background-color:lightblue;
+  border-top:none;
+}
+/* game board table */
+
+#board td {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: solid 5px lightskyblue;
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+/* pieces are div within game table cells: draw as colored circles */
+
+.piece {
+  /* TODO: make into circles */
+  margin: 5px;
+  width: 80%;
+  height: 80%;
+}
+
+
+/* TODO: make pieces red/blue,  depending on player 1/2 piece */
+
+/* column-top is table row of clickable areas for each column */
+
+#column-top td {
+  border: dashed 1px black;
+}
+.hover:hover {
+  background-color: black;
+  opacity: 50%;
+}
+.dropdown {
+  margin-top:50px;
+  position: relative;
+  display: inline-block;
+  position: absolute;
+  right:10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+u {
+  color: blue;
+  font-weight: bolder;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.fall {
+  animation-name: fall-animation;
+  animation-duration: 500ms;
+}
+.ending-fall {
+  animation-name: end-fall;
+  animation-duration: 2000ms;
+}
+
+span {
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+@keyframes fall-animation {
+  from {
+      transform: translateY(-400px);
+  }
+  to {
+      transform: translateY(0px);
+  }
+}
+@keyframes end-fall {
+  from {
+      transform: translateY(-50px);
+  }
+  to {
+      transform: translateY(2000px);
+  }
+}
+
+@media (max-width:1800px) {
+  body {
+   margin-left:5px;
+  }
+  .top-bar {
+    margin-bottom:5px;
+  }
+  #restart-arrow {
+    height:50px;
+  }
+  #restart-arrow:hover {
+    height:50px;
+  }
+  .image-container-1 {
+    background-image: url("Images/YellowPiece.png");
+    background-size: cover;
+    height:50px;
+    width:50px;
+  }
+  .image-container-2 {
+    background-image: url("Images/purpleDie.png");
+    background-size: cover;
+    height:50px;
+    width:50px;
+  }
+  .dropdown {
+    margin-top:50px;
+    position: relative;
+    display: inline-block;
+    margin-right:0px;
+  }
+  .game-setup {
+    display:flex;
+    justify-content: space-around;
+    justify-items: center;
+    flex-direction: column;
+
+  }
+  #lists {
+    display:flex;
+    justify-content: space-around;
+  }
+  .start-options {
+    display:flex;
+    justify-content: center;
+  }
+  #start-game {
+    width:100px;
+    height:50px;
+    margin-top:50px;
+    margin-right:20px;
+    position: relative;
+    right:0px;
+  }
+}@media (max-width:900px) {
+  body {
+   margin-left:5px;
+  }
+  .top-bar {
+    margin-bottom:5px;
+  }
+  #restart-arrow {
+    height:20px;
+  }
+  #restart-arrow:hover {
+    height:20px;
+  }
+  .image-container-1 {
+    background-image: url("Images/YellowPiece.png");
+    background-size: cover;
+    height:30px;
+    width:30px;
+  }
+  .image-container-2 {
+    background-image: url("Images/purpleDie.png");
+    background-size: cover;
+    height:30px;
+    width:30px;
+  }
+  .dropdown {
+    margin-top:50px;
+    position: relative;
+    display: inline-block;
+    font-size: small;
+    margin-right:0px;
+  }
+  .game-setup {
+    display:flex;
+    justify-content: space-around;
+    justify-items: center;
+    flex-direction: column;
+
+  }
+  #lists {
+    display:flex;
+    justify-content: space-around;
+  }
+  .start-options {
+    display:flex;
+    justify-content: space-around;
+  }
+  #start-game {
+    width:100px;
+    height:30px;
+    margin-top:50px;
+    margin-right:20px;
+    position: relative;
+    right:0px;
+  }
+  #board td {
+    width:30px;
+    height:30px;
+  }
+}
