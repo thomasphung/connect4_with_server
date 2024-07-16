@@ -56,7 +56,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 22
-          
+
+      - name: Install dependencies
+        run: npm install
+
       - name: Authenticate into Snyk 
         run: snyk auth
         
