@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Tests passed\" && exit 0"
+    "test": "echo \"Tests passed\" && exit 0",
+    "e2e-test": "npm start && npx playwright test",
+    "e2e-create": "npm start && npx playwright codegen # How do I start my server to create Playwright tests locally using codegen?"
   },
   "author": "",
   "license": "ISC",
